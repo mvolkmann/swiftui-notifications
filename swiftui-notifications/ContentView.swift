@@ -1,16 +1,16 @@
-//
-//  ContentView.swift
-//  swiftui-notifications
-//
-//  Created by Mark Volkmann on 5/9/22.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var model: Model
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Text("count = \(model.count)")
+            HStack {
+                PanelA()
+                PanelB()
+            }
+        }
     }
 }
 
